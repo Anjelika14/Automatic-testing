@@ -1,1 +1,0 @@
-[![Java CI with Gradle](https://github.com/Anjelika14/Automatic-testing/actions/workflows/gradle.yml/badge.svg)](https://github.com/Anjelika14/Automatic-testing/actions/workflows/gradle.yml)
