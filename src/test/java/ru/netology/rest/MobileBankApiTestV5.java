@@ -1,9 +1,12 @@
 package ru.netology.rest;
 
 import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 import static org.hamcrest.Matchers.is;
 
 class MobileBankApiTestV5 {
@@ -11,7 +14,7 @@ class MobileBankApiTestV5 {
     void shouldReturnDemoAccounts() {
         // Given - When - Then
         // Предусловия
-        given()
+        given ()
                 .baseUri("http://localhost:9999/api/v1")
                 // Выполняемые действия
                 .when()
@@ -23,4 +26,7 @@ class MobileBankApiTestV5 {
                 .body("every{ it.balance >= 0 }", is(true))
         ;
     }
-}
+
+
+    }
+
